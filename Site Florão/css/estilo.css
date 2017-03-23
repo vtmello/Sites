@@ -1,0 +1,369 @@
+/*
+GERAL
+*/
+
+body{
+	font-family: "Rancho", Helvetica, Arial, sans-serif;
+	color: #4d4d4d;
+}
+
+h1, h2, h3{
+	margin: 0;
+	font-family: "Rancho", Helvetica, Arial, sans-serif;
+}
+
+/*
+NAVEGAÇÃO
+*/
+
+nav {
+	display: flex; /*Adiciona navegações em mobiles e desktops*/
+	flex-direction: column; 
+	align-items: center; /*Alinha as colunas ao centro*/
+	background-color: #006400; /*cor de fundo*/
+	padding: 10px;
+}
+
+nav > a { /*Altera cor dos links*/
+	text-decoration: none; /*Retira o Sublinhado do texto*/
+	color: #f1f1f1; /*Cor da fonte*/
+	font-weight: 700; 
+	font-size: 24px; /*Tamanho da fonte*/
+	font-family: Pacifico, serif;
+	padding-top: 10px;
+	padding-left: 18px;
+}
+
+nav ul{
+	list-style: none; /*remove as bolinhas da lista do menu*/
+	padding: 0; /*remove o espaçamento interno = 0*/
+	display: flex; /*altera o estilo do menu*/
+	flex-direction: column; 
+	align-items: center; 
+	width: 100%; /*Define a Largura*/
+}
+
+nav ul li{
+	text-align: center;
+	width: 100%;
+}
+
+nav ul li a{
+	display: inline-block;
+	padding: 10px 0;
+	width: 70%;
+	text-decoration: none;
+	color: #f1f1f1;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	background-color: #458B00;
+}
+
+nav ul li a:hover{
+	background-color: #fff;
+	color: #006400;
+}
+
+nav img{
+	display: flex;
+	flex-direction: column;
+	width: 80px;
+	padding: 5px 0px 5px 5px;
+
+
+}
+
+/*
+CABEÇALHO
+*/
+
+header{
+	background-image: url('../Fundo/fundo 6.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #000000;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 100px;
+}
+
+header p {
+	margin-bottom: 2em;
+	font-size: 26px; 
+}
+
+/*
+SOBRE
+*/
+
+#sobre{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 15px 20px 20px;
+	background-color: #006400;
+	color: #f1f1f1;
+}
+
+#sobre p{
+	font-family: Lobster Two, Serif;
+	font-size: 20px;
+	margin-bottom: 2em;
+	max-width: 1000px
+}
+
+.botao{
+	color: #f1f1f1;
+	text-decoration: none;
+	padding: 10px 30px;
+	background-color: #458B00;
+	font-size: .9em;
+	font-family: Rancho, Serif;
+	border-radius: 3px; /*borda arrendondada*/
+}
+
+.botao:hover{
+	background-color: #fff;
+	color: #006400;
+}
+
+#servicos{
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#servicos div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-top: 30px;
+}
+
+/*
+GALERIA
+*/
+
+#galeria{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 20px;
+}
+
+#galeria h2{
+	margin-bottom: 20px;
+}
+
+#galeria img{
+	width: 100%;
+}
+
+	.pic{
+		width: 50px;
+		height: 50px;
+	}
+
+	.picbig{
+		position: absolute;
+		width: 0px;
+		-webkit-transition: width 0.3s linear 0s;
+		transition: width 0.3s linear 0s;
+		z-index: 10;
+	}
+
+	.pic+ .picbig:hover {
+		width: 200px;
+	}
+
+
+/*
+CLIENTES
+*/
+
+#clientes{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 10px;
+	background-color: #006400; 
+}
+
+#clientes h2{
+	margin-bottom: 10px;
+	color: #f1f1f1;
+}
+
+#clientes img{
+
+	width: 190px;
+	height: 100px;
+	max-width: 1000px;
+	border-color: #458B00;
+	border-style: solid;
+	border-radius: 15px;
+}
+
+/*
+CONTATO
+*/
+
+#contato{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 20px;
+}
+
+/*
+FOOTER
+*/
+
+footer{
+	text-align: center;
+	padding: 10px;
+	background-color: #006400;
+	color: #f1f1f1;
+}
+
+/*
+MEDIA QUERIES
+*/
+
+@media screen and (min-width: 768px) {
+/*
+NEVEGAÇÃO
+*/
+
+nav{
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+nav ul {
+	flex-direction: row;
+	width: 70%;
+}
+
+/*
+CABEÇALHO
+*/
+
+header{
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+	height: 700px;
+	height: 78vh;
+	justify-content: center;
+	overflow: hidden;
+
+
+}
+
+/*
+SOBRE
+*/
+	#sobre{
+		height: 250px;
+		height: 34vh;
+		justify-content: center;
+		min-height: 200px;
+	}
+
+	#servicos{
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+	
+	#servicos h2{
+		text-align: center;
+		width: 100%;
+	}
+
+	#servicos div{
+		flex-grow: 1;
+		flex-basis: 150px;
+		padding: 0 10px;
+	}
+
+	#galeria{
+		background-size: 100% 100%;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	#galeria h2{
+		width: 100%;
+		text-align: center;
+	}
+
+	#galeria img {
+		width: 33.33333333%;
+		height: 300px;
+
+	}
+
+
+	#clientes{
+		background-size: 100% 100%;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 30px 20px 30px 20px;
+	}
+
+	#clientes h2{
+		width: 100%;
+		text-align: center;
+	}
+
+	#clientes img{
+
+		width: 190px;
+		height: 100px;
+		max-width: 1000px;
+		border-color: #2E8B57;
+		border-style: solid;
+		border-radius: 15px;
+	}
+
+
+	#contato{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		max-width: 500px;
+		margin: 0 auto;
+		align-items: flex-start;
+
+	}
+
+	#contato div{
+	
+		color: green;
+
+	}
+
+	#contato h2,
+	#contato p{
+		font-size: 18px;
+		width: 100%;
+		color: black;
+
+	}
+
+	#contato a {
+			padding: 25px;
+
+	}
+	
+}
